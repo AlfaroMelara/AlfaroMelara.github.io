@@ -335,7 +335,7 @@ main {
   transition: var(--transition-2);
 }
 
-.sidebar.active { max-height: 405px; }
+.sidebar.active { max-height: 415px; }
 
 .sidebar-info {
   position: relative;
@@ -1947,4 +1947,8 @@ border-radius: 2%;
   display: inline;
   width: 240px;
   padding: 0 2px;
+}
+
+.avatar-box img {
+  border-radius: 15px;
 }
