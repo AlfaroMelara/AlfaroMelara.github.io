@@ -76,7 +76,19 @@
             <div class="contact-info">
               <p class="contact-title">Correo</p>
 
-              <a class="contact-link">alfaromelara.e@gmail.com</a>
+              <p class="contact-link" onclick="copiarAlPortapapeles('alfaromelara.e@gmail.com')">alfaromelara.e@gmail.com</p>
+              <script>
+                function copiarAlPortapapeles(email) {
+                  var textarea = document.createElement("textarea");
+                  textarea.value = email;
+                  document.body.appendChild(textarea); 
+                  textarea.select();
+                  document.execCommand("copy");
+                  document.body.removeChild(textarea);
+                  alert("Se ha copiado el correo electrónico: " + email);
+                }
+              </script>
+
             </div>
 
           </li>
@@ -90,9 +102,24 @@
             <div class="contact-info">
               <p class="contact-title">Teléfono</p>
 
-              <a class="contact-link" target="blank">(+506)
-                8676-7741
-              </a>
+              <p class="contact-link" onclick="copiarAlPortapapeles('+50686767741')">(+506) 8676-7741</p>
+              <script>
+                // Función para copiar el número de teléfono al portapapeles
+                function copiarAlPortapapeles(telefono) {
+                  // Crear un área de texto temporal para copiar el número de teléfono
+                  var textarea = document.createElement("textarea");
+                  textarea.value = telefono; // Asignar el número de teléfono al área de texto
+                  document.body.appendChild(textarea); // Agregar el área de texto al cuerpo del documento
+                  // Seleccionar y copiar
+                  textarea.select();
+                  document.execCommand("copy");
+                  // Eliminar el área de texto temporal
+                  document.body.removeChild(textarea);
+                  // Alerta
+                  alert("Se ha copiado el número de teléfono: " + telefono);
+                }
+              </script>
+              
             </div>
 
           </li>
@@ -239,7 +266,7 @@
           </ol>
         </section>
 
-           <!--
+        <!--
       
 
         <section class="timeline">
